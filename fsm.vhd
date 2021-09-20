@@ -70,9 +70,7 @@ architecture fsm_arch of fsm is
         cnext <= b and Y;
         bnext <= a and Z;
         anext <= (b and not(Z)) or (d and not(Z)) or (g and not(Z));
-        P1 <= b and not(Z);
-        P2 <= g and not(Z);
-        P5 <= d and not(Z);
+       
 
      ffg : D_Flip_Flop
         port map(
