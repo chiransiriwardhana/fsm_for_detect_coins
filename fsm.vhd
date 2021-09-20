@@ -41,9 +41,9 @@ architecture fsm_arch of fsm is
 
     component D_Flip_Flop
         port (
-           Q1: out std_logic;
-           Clock1:in std_logic;
-           D1: in std_logic);
+           Q: out std_logic;
+           Clock:in std_logic;
+           D: in std_logic);
     end component;
     
     signal a : std_logic;
@@ -76,46 +76,46 @@ architecture fsm_arch of fsm is
 
      ffg : D_Flip_Flop
         port map(
-            Q1 => g,
-            Clock1 => Clock,
-            D1 => gnext
+            Q => g,
+            Clock => Clock,
+            D => gnext
         );
         
      fff : D_Flip_Flop
         port map(
-            Q1 => f,
-            Clock1 => Clock,
-            D1 => fnext
+            Q => f,
+            Clock => Clock,
+            D => fnext
         );
      ffe : D_Flip_Flop
         port map(
-            Q1 => e,
-            Clock1 => Clock,
-            D1 => enext
+            Q => e,
+            Clock => Clock,
+            D => enext
         );
      ffd : D_Flip_Flop
         port map(
-            Q1 => d,
-            Clock1 => Clock,
-            D1 => dnext
+            Q => d,
+            Clock => Clock,
+            D => dnext
         );
      ffc : D_Flip_Flop
         port map(
-            Q1 => c,
-            Clock1 => Clock,
-            D1 => cnext
+            Q => c,
+            Clock => Clock,
+            D => cnext
         );
      ffb : D_Flip_Flop
         port map(
-            Q1 => b,
-            Clock1 => Clock,
-            D1 => bnext
+            Q => b,
+            Clock => Clock,
+            D => bnext
         );
      ffa : D_Flip_Flop
         port map(
-            Q1 => a,
-            Clock1 => Clock,
-            D1 => anext
+            Q => a,
+            Clock => Clock,
+            D => anext
         );
     P1 <= b and not(Z);
     P2 <= g and not(Z);
